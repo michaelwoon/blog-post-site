@@ -1,0 +1,181 @@
+body {
+  margin: 0px;
+}
+
+.PageWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  background-color: #454444;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: Verdana;
+}
+
+.Header-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header-logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Header-logoImage {
+  height: 48px;
+  padding-right: 12px;
+}
+
+.Header-siteName {
+  font-size: 30px;
+  font-family: Georgia;
+}
+
+.Header-user {
+  padding-top: 4px;
+}
+
+.Header-linkList {
+  padding-inline-start: 0px;
+  margin-bottom: 4px;
+}
+
+.Header-href {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.Header-linkItem {
+  display: inline;
+  padding-right: 5%;
+}
+
+.Author {
+  width: 50%;
+  align-self: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: Verdana;
+  display: flex;
+}
+
+.Author-image {
+  height: 64px;
+  margin-right: 16px;
+}
+
+.Author-href {
+  text-decoration: none;
+  color: black;
+}
+
+.Author-description {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.Author-date {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.Article {
+  width: 50%;
+  align-self: center;
+  font-family: Verdana;
+  margin-bottom: 16px;
+}
+
+.Article-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.Article-image {
+  max-width: 100%;
+}
+
+.Article-body {
+  font-family: Georgia;
+  white-space: pre-line;
+  line-height: 1.25;
+}
+
+.Related {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 16px;
+  font-family: Verdana;
+  justify-content: space-between;
+}
+
+.Related-item {
+  max-width: 30%;
+  max-height: 350px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #454444;
+  border-bottom: 2px solid #454444;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Related-image {
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.Related-href {
+  text-decoration: none;
+  color: black;
+}
+
+.Comments {
+  width: 50%;
+  align-self: center;
+  font-family: Verdana;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Comments-title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.Comments-box {
+  display: grid;
+  margin-bottom: 16px;
+}
+
+.Comments-button {
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-device-width: 600px) {
+  .Article {
+    width: 90%;
+  }
+  .Author {
+    width: 90%;
+  }
+  .Comments {
+    width: 90%;
+  }
+}

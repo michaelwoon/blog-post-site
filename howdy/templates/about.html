@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+{% load staticfiles %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Declaration of Independence</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="PageWrapper">
+  <header class="Header">
+    <div class="Header-icons">
+      <div class="Header-logoWrapper">
+        <img class="Header-logoImage" src="{% static 'images/mw-icon.png' %}" alt="mw logo">
+        <div class="Header-siteName">
+          | michaelwoon
+        </div>
+      </div>
+      <div class="Header-user">
+        <a href=# class="Header-href">LOGIN</a>
+      </div>
+    </div>
+    <div class="Header-links">
+      <ul class="Header-linkList">
+        <li class="Header-linkItem"><a href=# class="Header-href">HOME</a></li>
+        <li class="Header-linkItem"><a href=# class="Header-href">GAMING</a></li>
+        <li class="Header-linkItem"><a href=# class="Header-href">ANIME</a></li>
+        <li class="Header-linkItem"><a href=# class="Header-href">SPORTS</a></li>
+        <li class="Header-linkItem"><a href=# class="Header-href">MUSIC</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="Author">
+    <img class="Author-image" src="{% static 'images/jefferson.jpg' %}" alt="Thomas Jefferson">
+    <div class="Author-info">
+      <div class="Author-name">
+        <a href=# class="Author-href">Thomas Jefferson</a>
+      </div>
+      <div class="Author-description">
+        American Founding Father and Third President of the United States of America
+      </div>
+      <div class="Author-date">
+        October 5, 2018
+      </div>
+    </div>
+  </div>
+  <div class="Article">
+    <div class="Article-title">
+      The Declaration of Independence
+    </div>
+    <img class="Article-image" src="{% static 'images/declaration.jpg' %}" alt="Declaration of Independence">
+    <div class="Article-body">
+      When in the Course of human events it becomes necessary for one people to dissolve the political bands which have connected them with another and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.
+
+      We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness. — That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness. Prudence, indeed, will dictate that Governments long established should not be changed for light and transient causes; and accordingly all experience hath shewn that mankind are more disposed to suffer, while evils are sufferable than to right themselves by abolishing the forms to which they are accustomed. But when a long train of abuses and usurpations, pursuing invariably the same Object evinces a design to reduce them under absolute Despotism, it is their right, it is their duty, to throw off such Government, and to provide new Guards for their future security. — Such has been the patient sufferance of these Colonies; and such is now the necessity which constrains them to alter their former Systems of Government. The history of the present King of Great Britain is a history of repeated injuries and
+      usurpations, all having in direct object the establishment of an absolute Tyranny over these States. To prove this, let Facts be submitted to a candid world.
+    </div>
+  </div>
+  <div class="Related">
+    <div class="Related-item">
+      <img class="Related-image" src="{% static 'images/uva.jpg' %}" alt="UVA">
+      <div class="Related-title">
+        <a href=# class="Related-href">How to Get Accepted into UVA</a>
+      </div>
+      <div class="Related-author">
+        by Teresa Sullivan
+      </div>
+    </div>
+    <div class="Related-item">
+      <img class="Related-image" src="{% static 'images/frontend.png' %}" alt="Front-end Dev">
+      <div class="Related-title">
+        <a href=# class="Related-href">Front-end Development for Dummies</a>
+      </div>
+      <div class="Related-author">
+        by Mark Zuckerburg
+      </div>
+    </div>
+    <div class="Related-item">
+      <img class="Related-image" src="{% static 'images/cracking.jpg' %}" alt="Cracking the Coding Interview">
+      <div class="Related-title">
+        <a href=# class="Related-href">Cracking the Coding Interview</a>
+      </div>
+      <div class="Related-author">
+        by Gayle Mcdowell
+      </div>
+    </div>
+  </div>
+  <div class="Comments">
+    <div class="Comments-title">
+      Comments
+    </div>
+    <textarea id="title" type="text "rows="5" cols="20" onkeyup="Allow()" ></textarea>
+    <input class="Comments-button" type="submit" value="Type a comment!" onclick="insert()" /></form>
+    <div id="display"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var titles = [];
+  var titleInput = document.getElementById("title");
+  var messageBox = document.getElementById("display");
+  function Allow() {
+    if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="") {
+      user.title.value="";
+      alert("Enter only text");
+    }
+    window.location.reload()
+  }
+  function insert () {
+    titles.push(titleInput.value);
+    titleInput.value = "";
+    messageBox.innerHTML = "";
+    messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+  }
+</script>
+</body>
+</html>
