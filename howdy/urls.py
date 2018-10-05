@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from howdy import views
+from howdy.views import AboutList
 
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view()),
